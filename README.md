@@ -10,6 +10,8 @@ This repository contains solutions to various Frontend Mentor challenges that I 
 
 - [Qr-code-component](./Qr-code-component)
 
+- [Social-links-profile](./Social-links-profile)
+
 ## Additional Information
 
 [Frontend Mentor](https://www.frontendmentor.io) - The source of the challenges.
