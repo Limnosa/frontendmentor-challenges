@@ -1,5 +1,5 @@
 const text = "Welcome to my page!";
-const typingSpeed = 100; // Sebesség milliszekundumban
+const typingSpeed = 100;
 let i = 0;
 
 function type() {
