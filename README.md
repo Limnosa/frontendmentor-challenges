@@ -13,4 +13,4 @@ This repository contains solutions to various Frontend Mentor challenges that I 
 ## Additional Information
 
 [Frontend Mentor](https://www.frontendmentor.io) - The source of the challenges.
-- [My Frontend Mentor Profile](https://www.frontendmentor.io/profile/Limnosa) - Check out my other challenges and projects.
+[My Frontend Mentor Profile](https://www.frontendmentor.io/profile/Limnosa) - Check out my other challenges and projects.
