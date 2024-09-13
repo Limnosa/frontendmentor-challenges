@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Work Sans", sans-serif !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(275, 100%, 97%) !important;
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-position: top;
+    background-repeat: repeat-x!important;
+}
+
+.header {
+    display: flex;
+    gap: 23px;
+    align-items: center;
+
+}
+.main {
+    width: 600px;
+    height: auto;
+    padding: 43px 37px 16px 37px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+
+#star {
+    width: 42px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+#title {
+    font-size: 54px;
+    letter-spacing: 1.5px;
+    color: hsl(292, 42%, 14%);
+}
+
+.accordion-button {
+    color: hsl(292, 42%, 14%) !important;
+    font-size: 18px !important;
+    height: 77px;
+}
+
+.accordion-button:hover {
+    color: #AD28EB !important;
+}
+
+.accordion-body {
+    color: hsl(292, 16%, 49%) !important;
+    line-height: 21px;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
+.accordion-button::after {
+    background-image: url(assets/images/icon-plus.svg) !important;
+    width: 24px !important;
+    height: 24px !important;
+    background-size: 26px 26px !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(assets/images/icon-minus.svg) !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+    gap: 22px !important;
+}
+
+.attribution { 
+    font-size: 11px;
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 375px) {
+    body {
+        background-image: url(assets/images/background-pattern-mobile.svg);
+    }
+    
+    .main {
+        width: 327px;
+        border-radius: 8px;
+        padding: 30px 24px 24px 25px;
+    }
+
+    #title {
+        font-size: 32px;
+        letter-spacing: normal;
+    }
+
+    #star {
+        width: 22px;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    .accordion-button {
+        font-size: 16px !important;
+        height: 69px;
+        padding: 37px !important;
+    }
+
+    .accordion-body {
+        font-size: 14px !important;
+    }
+}

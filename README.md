@@ -12,6 +12,8 @@ This repository contains solutions to various Frontend Mentor challenges that I 
 
 - [Social-links-profile](./Social-links-profile)
 
+- [FAQ-accordion](./Faq-accordion)
+
 ## Additional Information
 
 [Frontend Mentor](https://www.frontendmentor.io) - The source of the challenges.
