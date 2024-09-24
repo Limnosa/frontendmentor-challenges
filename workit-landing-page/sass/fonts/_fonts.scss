@@ -1,0 +1,6 @@
+@use '../utils/mixins' as *;
+
+@include font-face(Fraunces_144pt-SemiBold, '../assets/fonts/fraunces/static/Fraunces_144pt-SemiBold', 600);
+@include font-face(Fraunces, '../assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght', 600);
+@include font-face(Manrope, '../assets/fonts/manrope/Manrope-VariableFont_wght', 700);
+@include font-face(Manrope-Regular, '../assets/fonts/manrope/static/Manrope-Regular', 400);

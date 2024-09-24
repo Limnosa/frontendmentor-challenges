@@ -1,0 +1,23 @@
+@use '../fonts/fonts' as *;
+
+//colors
+
+$green: #44FFA1;
+$purple900: #24053E;
+$purple500: #584D62;
+$purple100: #FCF8FF;
+
+//buttons
+
+$btn-color-hover: $green;
+$btn-border: none;
+
+$primary-btn-bg: $green;
+$primary-btn-color: $purple900;
+$primary-btn-padding: 12px 32px;
+$primary-btn-bg-hover: transparent;
+$primary-btn-border-hover: 2px solid $green;
+
+$secondary-btn-bg: transparent;
+$secondary-btn-color: white;
+$secondary-btn-border: 3px solid $green;

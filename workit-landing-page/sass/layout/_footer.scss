@@ -1,0 +1,29 @@
+@use '../utils/variables' as *;
+@use '../base/typography' as *;
+@use '../fonts/fonts' as *;
+@use '../layout/grid' as *;
+@use '../utils/mixins' as *;
+
+.footer {
+    @include flex-center(column);
+    gap :56px;
+
+    .social-media-icons {
+        svg {
+            margin-right: 25px;
+        }
+          
+        svg:last-child {
+            margin-right: 0;
+        }
+        
+        svg:hover path{
+            fill: $purple900;
+        }
+    }
+}
+@include respond-to(tablet) {
+    .footer {
+        padding: 80px;
+    }
+}

@@ -1,0 +1,192 @@
+@use '../utils/variables' as *;
+@use '../base/typography' as *;
+@use '../fonts/fonts' as *;
+@use '../layout/grid' as *;
+@use '../utils/mixins' as *;
+
+main {
+    background: linear-gradient(
+        to bottom,
+        $purple100 0%,
+        $purple100 48.8%,
+        white 48.8%,
+        white 100%
+    );
+    width: 100%;
+    position: relative;
+
+    @include respond-to(tablet) {
+        background: linear-gradient(
+        to bottom,
+        $purple100 0%,
+        $purple100 45%,
+        white 45%,
+        white 100%
+        );
+    }
+
+    @include respond-to(mobile) {
+        background: linear-gradient(
+        to bottom,
+        $purple100 0%,
+        $purple100 54%,
+        white 54%,
+        white 100%
+        );
+    }
+    .content {
+        height: 596px;
+        color: $purple900;
+        justify-content: center;
+        .value {
+            @include flex-top-center(column);
+            gap: 56px;
+            text-align: center;
+        }
+        .number {
+            border: 1px solid $purple500;
+            border-radius: 99%;
+            letter-spacing: 0;
+            font-family: Fraunces;
+            font-size: 24px;
+            font-weight: 600;
+            width: 56px;
+            height: 56px;
+            line-height: 56px;
+            text-align: center;
+
+        }
+        .value-1 {
+            grid-column: 1 / span 4;
+        }
+
+        .value-2 {
+            grid-column: 5 / span 4;
+        }
+
+        .value-3 {
+            grid-column: 9 / span 4;
+        }
+
+        @include respond-to(tablet) {
+            padding: 56px 44px 44px 44px;
+            height: 524px;
+
+            .value {
+                gap: 4.167vw  7.292vw;
+                height: min-content;
+                display: grid;
+                flex-direction: row;
+                text-align: start;
+            }
+
+            .value-1, .value-2, .value-3 {
+                grid-column: span 8;
+                
+                .des-title {
+                    margin-bottom: 3.646vw;
+                }
+            }
+
+            .value-3 {
+                margin-bottom: -32px;
+                z-index: 8;
+            }
+
+            .description {
+                grid-column: 2 / span 7;
+            }
+
+            .number {
+                font-size: 20px;
+                width: 48px;
+                height: 48px;
+                line-height: 48px;
+            }
+        }
+
+        @include respond-to(mobile) {
+            padding: 64px 20px;
+            height: 862px;
+            gap: 32px;
+            .value {
+                @include flex-center(column);
+                row-gap: 24px;
+                text-align: center;
+            }
+            .value-1, .value-2, .value-3 {
+                .des-title {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+
+    .CTA {
+        color: white;
+        justify-content: center;
+
+        .CTA-container {
+            grid-column: span 12;
+            position: relative;
+            height: 579px;
+
+            .founder {
+                width: 477px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .CTA-content {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: auto;
+                width: 50.694vw;
+                background-color: $purple900;
+            }
+        }
+
+        @include respond-to(tablet) {  
+            padding: 112px 44px 0 44px;
+            margin-top: 74px;
+
+            .CTA-container {
+                grid-column: span 8;
+                height: 558px;
+                .founder {
+                    width: 280px;
+                };
+                .CTA-content {
+                    width: clamp(300px, 65.625vw, 680px);
+                    padding: 48px;
+                };
+            }
+        }
+
+        @include respond-to(mobile) {
+            padding: 112px 20px 0 20px;
+            margin-top: 24px;
+            /*height: 625px;*/
+            
+            .CTA-container {
+                height: 625px;
+                grid-column: span 4;
+                text-align: center;
+
+                .founder {
+                    margin-left: auto;
+                    margin-right: auto;
+                    right: 0;
+                }
+
+                .CTA-content {
+                    padding: 32px;
+                    width: 100%;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}

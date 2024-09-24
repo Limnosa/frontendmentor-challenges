@@ -1,0 +1,16 @@
+@use '../fonts/fonts' as *;
+@use '../utils/mixins' as *;
+
+//font-styles
+
+@include responsive-text-style('text-1', Fraunces, 80px, 7.813vw, 48px, 600);
+@include responsive-text-style('text-2', Fraunces_144pt-SemiBold, 3.889vw, 6.25vw, 32px, 600, 120%);
+@include responsive-text-style('text-3', Fraunces_144pt-SemiBold, 2.222vw, 3.646vw, 24px, 600, 120%);
+@include responsive-text-style('text-4', Manrope-Regular, 1.25vw, 2.083vw, 16px, $line-height: 180%);
+
+.text-5 {
+    font-family: 'Manrope';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+  }

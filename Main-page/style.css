@@ -4,9 +4,10 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif !important;
-    background-color: #181818 !important;
+    font-family: "Roboto", sans-serif ;
+    background-color: #181818;
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 nav {
@@ -14,7 +15,7 @@ nav {
 }
 
 nav h1 {
-    font-size: 6rem;
+    font-size: clamp(65px, 6.806vw, 98px);
     color: #F0D800;
     margin-bottom: 16px;
     font-weight: 600;
@@ -22,7 +23,7 @@ nav h1 {
 
 #cursor {
     font-weight: 100;
-    font-size: 6rem;
+    font-size: clamp(65px, 6.806vw, 98px);
     color: white;
     animation: blink 0.7s steps(1) infinite;
 }
@@ -39,10 +40,14 @@ nav p {
 
 .cards {
     max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .row {
-    width: 100% !important;
+    width: 90%;
+    gap: 25px;
 }
 
 .col {
@@ -52,11 +57,12 @@ nav p {
 }
 
 .card {
-    border: 2px solid black !important;
-    border-radius: 20px !important;
+    border: 2px solid black;
+    border-radius: 20px;
     box-shadow: inset 0 -3em 3em rgb(0 0 0 / 30%),
     0.3em 0.3em 1em rgb(0 0 0 / 60%);
     transition: transform 0.3s ease-in-out;
+    width: 18rem;
 }
 
 .card:hover {
@@ -64,14 +70,16 @@ nav p {
 }
 
 .card-img-top {
-    border-top-left-radius: 20px !important;
-    border-top-right-radius: 20px !important;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .card-body {
     background-color: #F0C000;
     border-bottom-left-radius: 19px;
     border-bottom-right-radius: 19px;
+    height: 150px;
+    position: relative;
 }
 
 .card-text {
@@ -94,6 +102,8 @@ nav p {
     font-size: 1rem;
     font-weight: 700;
     padding-right: 15px;
+    position: absolute;
+    bottom: 15px;
 }
 
 .CSS {
@@ -101,6 +111,9 @@ nav p {
     font-size: 1rem;
     font-weight: 700;
     padding-right: 15px;
+    position: absolute;
+    bottom: 15px;
+    left: 75px;
 }
 
 footer {
@@ -131,32 +144,29 @@ footer ul {
 
 @media (max-width: 1500px) {
     .row-cols-xxl-5 > * {
-        flex: 0 0 25% !important;
-        max-width: 25% !important;
+        flex: 0 0 25%;
+        max-width: 25%;
     }
 }
 
 @media (max-width: 1206px) {
     .row-cols-md-4 > * {
-        flex: 0 0 30% !important;
-        max-width: 30% !important;
+        flex: 0 0 30%;
+        max-width: 30%;
     }
-    /*nav {
-        margin: 2% 2% 15% 2%;
-    }*/
   }
 
 @media (max-width: 1022px) {
     .row-cols-md-4 > * {
-        flex: 0 0 40% !important;
-        max-width: 40% !important;
+        flex: 0 0 40%;
+        max-width: 40%;
     }
 }
 
 
 @media (max-width: 757px) {
     .row-cols-md-4 > * {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
+        flex: 0 0 100%;
+        max-width: 100%;
       }
 }

@@ -14,6 +14,8 @@ This repository contains solutions to various Frontend Mentor challenges that I 
 
 - [FAQ-accordion](./Faq-accordion)
 
+- [Workit-landing-page](./workit-landing-page)
+
 ## Additional Information
 
 [Frontend Mentor](https://www.frontendmentor.io) - The source of the challenges.

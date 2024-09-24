@@ -1,0 +1,124 @@
+@use '../utils/variables' as *;
+@use '../base/typography' as *;
+@use '../layout/grid' as *;
+@use '../utils/mixins' as *;
+
+header {
+    background: linear-gradient(
+        to bottom,
+        $purple900 0%,
+        $purple900 82%,
+        $purple100 82%,
+        $purple100 100%
+    );
+    width: 100%;
+    height: 932px;
+    overflow: hidden;
+    position: relative;
+
+    
+    @include respond-to(tablet) {
+        height: 676px;
+    }
+
+    @include respond-to(mobile) {
+        height: 561px;
+    }
+
+    .nav-section {
+        justify-content: center;
+        align-items: end;
+        .light-logo {
+            grid-column: span 3;
+        }
+
+        button {
+            grid-column: span 9;
+            justify-self: end;
+        }
+
+        @include respond-to(tablet) {
+            padding: 32px 44px 0 44px;
+            justify-content: space-around;
+            .light-logo {
+                grid-column: span 2;
+            }
+
+            button {
+                grid-column: span 6;
+            }
+        }
+
+        @include respond-to(mobile) {
+            padding: 32px 20px 0 20px;
+
+            button {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    .hero {
+        justify-content: center;
+        .hero-title { 
+            grid-column: 4 / span 6;
+            max-height: 256px;
+            text-align: center;
+            h1 {
+                color: white;
+                letter-spacing: 1px;
+                span {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 92%;
+                        height: 3px;
+                        background-color: $green;
+                        position: absolute;
+                        bottom: auto;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+
+        @include respond-to(tablet) {
+            padding: 56px 44px 144px 44px;
+            .hero-title {
+                grid-column: 2 / span 6;
+                @include responsive-text-style('text-1', Fraunces_144pt-SemiBold, 80px, 7.813vw, 48px, 600);
+
+            }
+        }
+
+        @include respond-to(mobile) {
+            padding: 56px 20px 144px 20px;
+            .hero-title {
+                grid-column: span 4;
+            }
+        }
+    }
+
+    .header-decoration {
+
+        .hero-img {
+            width: clamp(602px, 53.264vw, 767px);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include respond-to(tablet) {
+                width: clamp(470px, 78.385vw, 602.81px);
+                padding: 0 44px;   
+            }
+
+            @include respond-to(mobile) {
+                width: 360.02px;
+                padding: 0 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,134 @@
+//FONTS
+
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+    @font-face {
+      font-family: quote($font-name);
+      src: url($path+'.ttf') format('truetype');
+      font-weight: $weight;
+      font-style: $style;
+      font-display: swap;
+    }
+}
+
+@mixin responsive-text-style($prefix, $font-name, $size-desktop, $size-tablet, $size-mobile, $weight: 400, $line-height: 100%) {
+    // Desktop
+    .#{$prefix} {
+        font-family: quote($font-name);
+        font-size:  clamp($size-mobile, $size-desktop, 80px);
+        font-weight: $weight;
+        line-height: $line-height;
+
+        //Tablet
+        @media screen and (max-width: 768px) {
+            font-family: quote($font-name);
+            font-size: clamp($size-mobile, $size-tablet, 60px);
+            font-weight: $weight;
+            line-height: $line-height;
+        }
+
+        //Mobile
+        @media screen and (max-width: 375px) {
+            font-family: quote($font-name);
+            font-size: $size-mobile;
+            font-weight: $weight;
+            line-height: $line-height;
+        }
+    }
+}
+
+//SPACING
+
+@mixin generate-spacing($prefix, $property) {
+    $sizes: 100, 150, 200, 250, 350, 400, 500, 550, 700, 800, 1000, 1100, 1400, 1600, 1800, 2100, 3700;
+    $spacing: 0.08px;
+  
+    @for $i from 1 through length($sizes) {
+        $size: nth($sizes, $i);
+
+        .#{$prefix}-#{$size} {
+            #{$property}: $spacing * $size;
+        }
+    
+        .#{$prefix}t-#{$size} {
+            #{$property}-top: $spacing * $size;
+        }
+    
+        .#{$prefix}r-#{$size} {
+            #{$property}-right: $spacing * $size;
+        }
+    
+        .#{$prefix}b-#{$size} {
+            #{$property}-bottom: $spacing * $size;
+        }
+    
+        .#{$prefix}l-#{$size} {
+            #{$property}-left: $spacing * $size;
+        }
+
+        .#{$prefix}x-#{$size} {
+            #{$property}-left: $spacing * $size;
+            #{$property}-right: $spacing * $size;
+        }
+
+        .#{$prefix}y-#{$size} {
+            #{$property}-top: $spacing * $size;
+            #{$property}-bottom: $spacing * $size;
+        }
+    }
+}
+
+//grid 
+
+@mixin responsive-grid($desktop-columns, $tablet-columns, $mobile-columns, $desktop-gap, $tablet-gap, $mobile-gap) {
+    //Desktop
+    .grid {
+        display: grid;
+        grid-template-columns: repeat($desktop-columns, 1fr);
+        column-gap: $desktop-gap;
+        max-width: 90%;
+        margin: 0 auto;
+
+        //Tablet
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat($tablet-columns, 1fr);
+            column-gap: $tablet-gap;
+            max-width: 100vw;
+            margin: 0;
+        }
+        //Mobile
+        @media screen and (max-width: 375px) {
+            grid-template-columns: repeat($mobile-columns, 1fr);
+            column-gap: $mobile-gap;
+        }
+    }
+}
+
+
+//flex
+
+@mixin flex-center($flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-top-center($flex-direction: row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: center;
+}
+
+//media query
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == mobile {
+        @media (max-width: 375px) {
+            @content;
+        }
+    } @else if $breakpoint == tablet {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+}

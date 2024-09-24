@@ -1,0 +1,36 @@
+@use '../base/typography' as *;
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.button-primary {
+    color: $primary-btn-color;
+    background-color: $primary-btn-bg;
+    border: none;
+    outline: $btn-border;
+    padding: $primary-btn-padding;
+    cursor: pointer;
+
+    &:hover {
+        color: $btn-color-hover;
+        background-color: $primary-btn-bg-hover;
+        outline: $primary-btn-border-hover;
+    }
+}
+
+.button-secondary {
+    color: $secondary-btn-color;
+    background-color: $secondary-btn-bg;
+    border: $btn-border;
+    border-bottom: $secondary-btn-border;
+    cursor: pointer;
+    
+    &:hover {
+        color: $btn-color-hover;
+    }
+}
+
+@include respond-to(mobile) {
+    .button-primary {
+        font-size: 16px;
+    }
+}

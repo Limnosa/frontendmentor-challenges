@@ -1,0 +1,142 @@
+@use '../utils/variables' as *;
+@use '../base/typography' as *;
+@use '../layout/grid' as *;
+@use '../utils/mixins' as *;
+
+
+//Header
+
+.header-decoration {
+
+    .ornamental {
+        position: absolute;
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 165px;
+    }
+
+    .orntablet {
+        display: none;
+    }
+
+    .ornmobile {
+        display: none;
+    }
+
+    .pattern-1 {
+        position: absolute;
+        right: min(83.6vw, 90vw);
+        top: 137.66px;
+    }
+    
+    .pattern-2 {
+        position: absolute;
+        left: 91.2vw;
+        top: 330px;
+    }
+
+    @include respond-to(tablet) {
+        .pattern-1 {
+            right: min(90vw, 85vw);
+        }
+
+        .pattern-2 {
+            left: 89vw;
+        }
+
+        .ornamental {
+            display: none;
+        }
+
+        .orntablet {
+            display: block;
+            position: absolute;
+            bottom: 115px;
+            width: 100%;
+        }
+    }
+
+    @include respond-to(mobile) {
+        .pattern-1, .pattern-2{
+            display: none;
+        }
+
+        .orntablet {
+            display: none;
+        }
+
+        .ornmobile {
+            display: block;
+            position: absolute;
+            bottom: 100px;
+            width: 100%;
+        }
+    }
+}
+
+//Main
+
+.ornamental-2 {
+    position: absolute;
+    width: 100%;
+    bottom: 657px;
+}
+
+.orntablet-2 {
+    display: none;
+    width: 100%;
+}
+
+.ornmobile-2 {
+    display: none;
+}
+
+.CTA-container {
+
+    .pattern-3 {
+        position: absolute;
+        bottom: -65px;
+        right: 110px;
+    }
+    
+}
+
+@include respond-to(tablet) {
+    .ornamental-2 {
+        display: none;
+    }
+
+    .orntablet-2 {
+        display: block;
+        position: absolute;
+        bottom: 690px;
+        background-color: $purple100;
+        z-index: 1;
+    }
+
+    .CTA-container .pattern-3 {
+        bottom: -113px;
+        right: 0px;
+    }
+}
+
+@include respond-to(mobile) {
+    .pattern-3 {
+        display: none;
+    }
+
+    .orntablet-2 {
+        display: none;
+    }
+
+    .ornmobile-2 {
+        display: block;
+        position: absolute;
+        bottom: 740px;
+        width: 100%;
+        background-color: $purple100;
+
+    }
+}
+
