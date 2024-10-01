@@ -1,0 +1,15 @@
+@use '../base/typography' as *;
+@use '../utils/mixins' as *;
+
+@mixin button {
+    height: 44px;
+    width: auto;
+    padding: 4px 32px;
+    border-radius: 28px;
+    border: none;
+    @include text-3;
+
+    @include breakpoint(tablet) {
+        width: 172px;
+    }
+}

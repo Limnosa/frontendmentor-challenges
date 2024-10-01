@@ -116,6 +116,16 @@ nav p {
     left: 75px;
 }
 
+.JS {
+    color: rgb(255, 30, 0);
+    font-size: 1rem;
+    font-weight: 700;
+    padding-right: 15px;
+    position: absolute;
+    bottom: 15px;
+    left: 120px;
+}
+
 footer {
     position: relative;
     bottom: 0;

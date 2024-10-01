@@ -1,0 +1,258 @@
+@use 'utils/variables' as *;
+@use 'utils/mixins' as *;
+@use 'base/reset' as *;
+@use 'base/typography' as *;
+@use 'components/buttons' as *;
+
+
+.body {
+    height: 100vh;
+    width: 100%;
+    padding: 36px;
+    overflow: hidden;
+    position: relative;
+
+    @include breakpoint(tablet) {
+        padding: 44px;
+        background-color: $blue-950;
+    }
+
+    @include breakpoint(desktop) {
+        padding: 11.111vw;
+    }
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+        align-items: flex-start;
+        text-align: start;
+    }
+
+    @include breakpoint(desktop) {
+        height: 68.333vh;
+    }
+}
+
+.host-img {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 28% center;
+    z-index: -1;
+
+    @include breakpoint(tablet) {
+        height: 868px;
+        width: auto;
+        left: 75%;
+    }
+
+    @include breakpoint(desktop) {
+        height: 654px;
+        top: 164px;
+        left: auto;
+        right: -450px;
+        
+
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+
+    @include breakpoint(tablet) {
+        display: none;
+    }
+}
+
+.color1 {    
+    background-color: rgba(84, 230, 175, 0.1);
+}
+
+.color2 {    
+    background-color: rgba(18, 23, 37, 0.9);
+}
+
+#logo {
+    margin-bottom: 56px;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 104px;
+    }
+
+    @include breakpoint(desktop) {
+        margin-bottom: 10.833vh;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    h1 {
+        @include text-1;
+        padding-bottom: 16px;
+
+        span {
+            color: $green;
+        }
+    }
+
+    p {
+        @include text-2;
+    }
+
+    .logos {
+        height: 17px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 55.94px 45px 72.97px 75.88px;
+        justify-content: space-between;
+
+        img {
+            height: auto;
+            max-width: 100%;
+            opacity: 0.6;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+
+        #e-mail {
+            @include button;
+            background-color: $blue-900;
+            outline: none;
+        }
+
+        #wrong-email {
+            @include button;
+            outline: none;
+            border: 2px solid $red;
+            background-color: $blue-900;
+        }
+
+        #submit-button {
+            @include button;
+            background-color: $green;
+            color: $blue-950;
+
+            &:hover {
+                background-color: mix($green, $white, 50%);
+            }
+        }
+
+        #error {
+            color: $red;
+            font-family: "Chivo", sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+        }
+    }
+
+    @include breakpoint(tablet) {
+        background-color: $blue-950;
+        width:  77.083vw;
+        padding: 88px 64px 0 0;
+        display: grid;
+        grid-template-columns: repeat(6, 8.333vw);
+        column-gap: 31px;
+        
+        .text {
+            grid-column: 1 / span 5;
+
+            h1 {
+                padding-bottom: 24px;
+            }
+        }
+
+        form {
+            grid-area: 2 / 1 / 2 / 6;
+            position: relative;
+            width: 448px;
+            gap: 0;
+
+            #e-mail {
+                width: 100%;
+                height: 52px;
+            }
+
+            #wrong-email {
+                width: 100%;
+                height: 52px;
+            }
+
+            #error {
+                padding: 8px 32px 0;                
+            }
+
+            #submit-button {
+                position: absolute;
+                right: 5px;
+                top: 4px;
+            }
+        }
+
+        .logos {
+            grid-column: 1 / span 6;
+            padding-top: 24px;
+            height: 53px;
+            grid-template-columns: repeat(4, 1fr);
+
+            img {
+                max-height: 100%;
+            }
+        }
+    }
+
+    @include breakpoint(desktop) {
+        padding: 6.111vw 4.444vw 0 0;
+        width: 736px;
+        grid-template-columns: repeat(7, 1fr);
+        row-gap: 4.167vh; 
+
+        .text {
+            grid-column: span 7;
+
+            p {
+            padding-right: 220px;
+            }
+        }
+    }
+}
+
+.dots {
+    display: none;
+
+    @include breakpoint(tablet) {
+        display: block;
+        position: fixed;
+        bottom: 105px;
+        right: -128px;
+    }
+
+    @include breakpoint(desktop) {
+        right: 0;
+        bottom: 90px;
+    }
+}

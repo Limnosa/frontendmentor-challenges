@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Chivo", sans-serif;
+  color: white;
+  /*border: 1px solid red;*/
+}
+
+.body {
+  height: 100vh;
+  width: 100%;
+  padding: 36px;
+  overflow: hidden;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .body {
+    padding: 44px;
+    background-color: #121725;
+  }
+}
+@media (min-width: 1024px) {
+  .body {
+    padding: 11.111vw;
+  }
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  main {
+    align-items: flex-start;
+    text-align: start;
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    height: 68.333vh;
+  }
+}
+
+.host-img {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 28% center;
+     object-position: 28% center;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  .host-img {
+    height: 868px;
+    width: auto;
+    left: 75%;
+  }
+}
+@media (min-width: 1024px) {
+  .host-img {
+    height: 654px;
+    top: 164px;
+    left: auto;
+    right: -450px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .overlay {
+    display: none;
+  }
+}
+
+.color1 {
+  background-color: rgba(84, 230, 175, 0.1);
+}
+
+.color2 {
+  background-color: rgba(18, 23, 37, 0.9);
+}
+
+#logo {
+  margin-bottom: 56px;
+}
+@media (min-width: 768px) {
+  #logo {
+    margin-bottom: 104px;
+  }
+}
+@media (min-width: 1024px) {
+  #logo {
+    margin-bottom: 10.833vh;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.content h1 {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  padding-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .content h1 {
+    font-size: 48px;
+  }
+}
+.content h1 span {
+  color: #54E6AF;
+}
+.content p {
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: #C2CBE5;
+}
+@media (min-width: 768px) {
+  .content p {
+    font-size: 18px;
+  }
+}
+.content .logos {
+  height: 17px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 55.94px 45px 72.97px 75.88px;
+  justify-content: space-between;
+}
+.content .logos img {
+  height: auto;
+  max-width: 100%;
+  opacity: 0.6;
+}
+.content form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.content form #e-mail {
+  height: 44px;
+  width: auto;
+  padding: 4px 32px;
+  border-radius: 28px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 200%;
+  letter-spacing: 0;
+  background-color: #2C344B;
+  outline: none;
+}
+@media (min-width: 768px) {
+  .content form #e-mail {
+    width: 172px;
+  }
+}
+.content form #wrong-email {
+  height: 44px;
+  width: auto;
+  padding: 4px 32px;
+  border-radius: 28px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 200%;
+  letter-spacing: 0;
+  outline: none;
+  border: 2px solid #fb3e3e;
+  background-color: #2C344B;
+}
+@media (min-width: 768px) {
+  .content form #wrong-email {
+    width: 172px;
+  }
+}
+.content form #submit-button {
+  height: 44px;
+  width: auto;
+  padding: 4px 32px;
+  border-radius: 28px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 200%;
+  letter-spacing: 0;
+  background-color: #54E6AF;
+  color: #121725;
+}
+@media (min-width: 768px) {
+  .content form #submit-button {
+    width: 172px;
+  }
+}
+.content form #submit-button:hover {
+  background-color: #aaf3d7;
+}
+.content form #error {
+  color: #fb3e3e;
+  font-family: "Chivo", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  .content {
+    background-color: #121725;
+    width: 77.083vw;
+    padding: 88px 64px 0 0;
+    display: grid;
+    grid-template-columns: repeat(6, 8.333vw);
+    -moz-column-gap: 31px;
+         column-gap: 31px;
+  }
+  .content .text {
+    grid-column: 1/span 5;
+  }
+  .content .text h1 {
+    padding-bottom: 24px;
+  }
+  .content form {
+    grid-area: 2/1/2/6;
+    position: relative;
+    width: 448px;
+    gap: 0;
+  }
+  .content form #e-mail {
+    width: 100%;
+    height: 52px;
+  }
+  .content form #wrong-email {
+    width: 100%;
+    height: 52px;
+  }
+  .content form #error {
+    padding: 8px 32px 0;
+  }
+  .content form #submit-button {
+    position: absolute;
+    right: 5px;
+    top: 4px;
+  }
+  .content .logos {
+    grid-column: 1/span 6;
+    padding-top: 24px;
+    height: 53px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .content .logos img {
+    max-height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .content {
+    padding: 6.111vw 4.444vw 0 0;
+    width: 736px;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 4.167vh;
+  }
+  .content .text {
+    grid-column: span 7;
+  }
+  .content .text p {
+    padding-right: 220px;
+  }
+}
+
+.dots {
+  display: none;
+}
+@media (min-width: 768px) {
+  .dots {
+    display: block;
+    position: fixed;
+    bottom: 105px;
+    right: -128px;
+  }
+}
+@media (min-width: 1024px) {
+  .dots {
+    right: 0;
+    bottom: 90px;
+  }
+}/*# sourceMappingURL=main.css.map */

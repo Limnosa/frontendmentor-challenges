@@ -16,6 +16,8 @@ This repository contains solutions to various Frontend Mentor challenges that I 
 
 - [Workit-landing-page](./workit-landing-page)
 
+- [Pod-request-acces-landing-page](./pod-request-access-landing-page)
+
 ## Additional Information
 
 [Frontend Mentor](https://www.frontendmentor.io) - The source of the challenges.
