@@ -22,7 +22,7 @@
 }
 @media (min-width: 1024px) {
   .body {
-    padding: 11.111vw;
+    padding: 110px 11.111vw;
   }
 }
 
@@ -69,7 +69,7 @@ main {
 @media (min-width: 1024px) {
   .host-img {
     height: 654px;
-    top: 164px;
+    top: 127px;
     left: auto;
     right: -450px;
   }
@@ -122,7 +122,7 @@ main {
   font-weight: 300;
   font-size: 32px;
   line-height: 120%;
-  letter-spacing: 0;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding-bottom: 16px;
 }
@@ -278,7 +278,7 @@ main {
 @media (min-width: 1024px) {
   .content {
     padding: 6.111vw 4.444vw 0 0;
-    width: 736px;
+    width: 715px;
     grid-template-columns: repeat(7, 1fr);
     row-gap: 4.167vh;
   }
@@ -304,6 +304,6 @@ main {
 @media (min-width: 1024px) {
   .dots {
     right: 0;
-    bottom: 90px;
+    bottom: 127px;
   }
 }/*# sourceMappingURL=main.css.map */

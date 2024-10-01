@@ -18,7 +18,7 @@
     }
 
     @include breakpoint(desktop) {
-        padding: 11.111vw;
+        padding: 110px 11.111vw;
     }
 }
 
@@ -59,7 +59,7 @@ main {
 
     @include breakpoint(desktop) {
         height: 654px;
-        top: 164px;
+        top: 127px;
         left: auto;
         right: -450px;
         
@@ -227,7 +227,7 @@ main {
 
     @include breakpoint(desktop) {
         padding: 6.111vw 4.444vw 0 0;
-        width: 736px;
+        width: 715px;;
         grid-template-columns: repeat(7, 1fr);
         row-gap: 4.167vh; 
 
@@ -253,6 +253,6 @@ main {
 
     @include breakpoint(desktop) {
         right: 0;
-        bottom: 90px;
+        bottom: 127px;
     }
 }
