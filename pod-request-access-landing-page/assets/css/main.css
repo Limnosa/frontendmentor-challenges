@@ -40,11 +40,6 @@ main {
     text-align: start;
   }
 }
-@media (min-width: 1024px) {
-  main {
-    height: 68.333vh;
-  }
-}
 
 .host-img {
   position: fixed;
@@ -285,6 +280,9 @@ main {
   .content .text {
     grid-column: span 7;
   }
+  .content .text h1 {
+    font-size: 50px;
+  }
   .content .text p {
     padding-right: 220px;
   }
@@ -304,6 +302,6 @@ main {
 @media (min-width: 1024px) {
   .dots {
     right: 0;
-    bottom: 127px;
+    bottom: 70px;
   }
 }/*# sourceMappingURL=main.css.map */

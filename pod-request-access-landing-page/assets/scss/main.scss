@@ -34,10 +34,6 @@ main {
         align-items: flex-start;
         text-align: start;
     }
-
-    @include breakpoint(desktop) {
-        height: 68.333vh;
-    }
 }
 
 .host-img {
@@ -234,6 +230,10 @@ main {
         .text {
             grid-column: span 7;
 
+            h1 {
+                font-size: 50px;
+            }
+
             p {
             padding-right: 220px;
             }
@@ -253,6 +253,6 @@ main {
 
     @include breakpoint(desktop) {
         right: 0;
-        bottom: 127px;
+        bottom: 70px;
     }
 }
