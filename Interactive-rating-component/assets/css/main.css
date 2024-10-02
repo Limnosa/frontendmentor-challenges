@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #131518;
+  font-family: "Overpass";
+}
+
+main {
+  display: flex;
+  background: radial-gradient(circle at top center, #232A34 0%, #181E27 100%);
+  border-radius: 15px;
+  min-width: 327px;
+  width: 87.2vw;
+  max-width: 412px;
+  min-height: 360px;
+  height: 53.973vh;
+  max-height: 416px;
+}
+@media (min-width: 768px) {
+  main {
+    border-radius: 30px;
+  }
+}
+
+.rating-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(20px, 2.999vh, 25px);
+  margin-left: clamp(22px, 5.867vw, 32px);
+  margin-right: clamp(22px, 5.867vw, 32px);
+  margin-top: clamp(24px, 6.4vw, 32px);
+  margin-bottom: 32px;
+}
+.rating-container .star-icon {
+  background-color: #262E38;
+  border-radius: 50%;
+  min-width: 40px;
+  width: 10.667vw;
+  max-width: 48px;
+  min-height: 40px;
+  height: 10.667vw;
+  max-height: 48px;
+  line-height: 5.997vh;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.rating-container .star-icon #star {
+  min-width: 13.96px;
+  width: 3.723vw;
+  max-width: 16.75px;
+  height: auto;
+}
+.rating-container input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+.rating-container .rating {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  -moz-column-gap: clamp(17px, 4.533vw, 21px);
+       column-gap: clamp(17px, 4.533vw, 21px);
+}
+.rating-container .rating label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #262E38;
+  min-width: 42px;
+  width: 11.2vw;
+  max-width: 51px;
+  min-height: 42px;
+  height: 11.2vw;
+  max-height: 51px;
+  font-weight: 700;
+  font-size: clamp(14px, 3.733vw, 16px);
+  line-height: 24px;
+  letter-spacing: clamp(0.17px, 0.045vw, 0.2px);
+  color: #969FAD;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+.rating-container .rating input[type=radio]:hover + label {
+  background-color: #fff;
+  color: #262E38;
+}
+.rating-container .rating input[type=radio]:checked + label {
+  background-color: #FC7614;
+  color: #262E38;
+}
+.rating-container button {
+  width: 100%;
+  height: 45px;
+  margin-top: clamp(20px, 2.999vh, 25px);
+  border-radius: 22.5px;
+  border: none;
+  background-color: #FC7614;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: auto;
+  letter-spacing: 1.87px;
+  color: #131518;
+  color: #131518;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .rating-container button {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+}
+.rating-container button:active {
+  background-color: #fff;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: clamp(24px, 6.4vw, 28px);
+  line-height: auto;
+  color: #fff;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #969FAD;
+}
+@media (min-width: 768px) {
+  .text {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+.feedback-container {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: clamp(22px, 5.867vw, 26px);
+  margin-left: clamp(22px, 5.867vw, 32px);
+  margin-right: clamp(22px, 5.867vw, 32px);
+  margin-top: clamp(22px, 5.867vw, 45px);
+  margin-bottom: clamp(22px, 5.867vw, 45px);
+}
+.feedback-container img {
+  min-width: 144px;
+  width: 38.4vw;
+  max-width: 162px;
+  height: auto;
+}
+.feedback-container #feedback {
+  min-width: 168px;
+  width: 44.8vw;
+  max-width: 193px;
+  height: 32px;
+  background-color: #262E38;
+  color: #FC7614;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  border-radius: 22.5px;
+  padding: 6px 0;
+}
+@media (min-width: 768px) {
+  .feedback-container #feedback {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  color: hsl(217, 12%, 63%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=main.css.map */

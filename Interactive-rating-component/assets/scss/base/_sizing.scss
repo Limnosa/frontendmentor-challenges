@@ -1,0 +1,36 @@
+//width, height
+
+@mixin responsive-size($type, $min, $responsive, $max) {
+    min-#{$type}: $min;
+    #{$type}: $responsive;
+    max-#{$type}: $max;
+  }
+
+//padding, margin, gap
+
+@mixin responsive-spacing($type, $direction: all, $min, $responsive-size, $max) {
+  @if $direction == all {
+    #{$type}: clamp($min, $responsive-size, $max);
+  }
+  @else if $direction == top {
+    #{$type}-top: clamp($min, $responsive-size, $max);
+  }
+  @else if $direction == right {
+    #{$type}-right: clamp($min, $responsive-size, $max);
+  }
+  @else if $direction == bottom {
+    #{$type}-bottom: clamp($min, $responsive-size, $max);
+  }
+  @else if $direction == left {
+    #{$type}-left: clamp($min, $responsive-size, $max);
+  }
+  @else if $direction == x {
+    #{$type}-left: clamp($min, $responsive-size, $max);
+    #{$type}-right: clamp($min, $responsive-size, $max);
+  }
+  @else if $direction == y {
+    #{$type}-top: clamp($min, $responsive-size, $max);
+    #{$type}-bottom: clamp($min, $responsive-size, $max);
+  }
+}
+  

@@ -1,0 +1,42 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+
+@mixin heading-large{
+    font-weight: 700;
+    font-size: clamp(24px, 6.4vw, 28px);
+    line-height: auto;
+    color: $white;
+}
+
+@mixin rating{
+    font-weight: 700;
+    font-size: clamp(14px, 3.733vw, 16px);
+    line-height: 24px;
+    letter-spacing: clamp(0.17px, 0.045vw, 0.2px);
+    color: $light-grey;
+}
+
+@mixin heading-medium{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: auto;
+    letter-spacing: 1.87px;
+    color: $very-dark-blue;
+
+    @include breakpoint(tablet) {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+}
+
+@mixin body{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+
+
+    @include breakpoint(tablet) {
+        font-size: 15px;
+        line-height: 24px;
+    }
+}

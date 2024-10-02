@@ -18,6 +18,8 @@ This repository contains solutions to various Frontend Mentor challenges that I 
 
 - [Pod-request-acces-landing-page](./pod-request-access-landing-page)
 
+- [Interactive-rating-component](./Interactive-rating-component)
+
 ## Additional Information
 
 [Frontend Mentor](https://www.frontendmentor.io) - The source of the challenges.

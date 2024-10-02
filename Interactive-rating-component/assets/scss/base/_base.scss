@@ -1,0 +1,27 @@
+@use '../utils/variables' as *;
+@use '../base/sizing' as *;
+@use '../utils/mixins' as *;
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $very-dark-blue;
+    font-family: 'Overpass';
+}
+
+main {
+    display: flex;
+    background: $black-radial;
+    border-radius: 15px;
+    @include responsive-size(width, 327px, 87.2vw, 412px);
+    @include responsive-size(height, 360px, 53.973vh, 416px);
+
+    @include breakpoint(tablet) {
+        border-radius: 30px;
+    }
+}
