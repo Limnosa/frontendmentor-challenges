@@ -4,7 +4,6 @@
 @mixin heading-large{
     font-weight: 700;
     font-size: clamp(24px, 6.4vw, 28px);
-    line-height: auto;
     color: $white;
 }
 
@@ -19,9 +18,9 @@
 @mixin heading-medium{
     font-weight: 700;
     font-size: 14px;
-    line-height: auto;
     letter-spacing: 1.87px;
     color: $very-dark-blue;
+    text-transform: uppercase;
 
     @include breakpoint(tablet) {
         font-size: 15px;

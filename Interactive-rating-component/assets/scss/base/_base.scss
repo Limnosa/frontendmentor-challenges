@@ -19,7 +19,8 @@ main {
     background: $black-radial;
     border-radius: 15px;
     @include responsive-size(width, 327px, 87.2vw, 412px);
-    @include responsive-size(height, 360px, 53.973vh, 416px);
+    /*@include responsive-size(height, 360px, 53.973vh, 416px);*/
+    height: auto;
 
     @include breakpoint(tablet) {
         border-radius: 30px;

@@ -1,12 +1,11 @@
 @use '../utils/variables' as *;
 @use '../base/sizing' as *;
 @use '../base/typography' as *;
+@use '../utils/mixins' as *;
 
 .rating-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    @include responsive-spacing(gap, all, 20px, 2.999vh, 25px);    
     @include responsive-spacing(margin, x, 22px, 5.867vw, 32px);
     @include responsive-spacing(margin, top, 24px, 6.4vw, 32px);
     margin-bottom: 32px;
@@ -16,6 +15,7 @@
         border-radius: 50%;
         @include responsive-size(width, 40px, 10.667vw, 48px);
         @include responsive-size(height, 40px, 10.667vw, 48px);
+        @include responsive-spacing(margin, bottom, 16px, 4.267vw, 30px);
         line-height: 5.997vh;
         display: inline-flex;
         align-items: center;
@@ -27,60 +27,72 @@
         }
     }
 
+    #rating-title {
+        margin-bottom: 17px;
+    }
+
     input[type="radio"] {
         position: absolute;
         opacity: 0;
     }
+    #rating-form {
+        margin-top: 24px;
 
-    .rating {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        @include responsive-spacing(column-gap, all, 17px, 4.533vw, 21px);
+        .rating {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            @include responsive-spacing(column-gap, all, 17px, 4.533vw, 21px);
 
 
-        label {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: $dark-blue;
-            @include responsive-size(width, 42px, 11.2vw, 51px);
-            @include responsive-size(height, 42px, 11.2vw, 51px);
-            @include rating;
-            border-radius: 50%;
-            text-align: center;
-            cursor: pointer;
+            label {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $dark-blue;
+                @include responsive-size(width, 42px, 11.2vw, 51px);
+                @include responsive-size(height, 42px, 11.2vw, 51px);
+                @include rating;
+                border-radius: 50%;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            input[type="radio"]:hover + label {
+                background-color: $white;
+                color: $dark-blue;
+            }
+
+            input[type="radio"]:checked + label {
+                background-color: $orange;
+                color: $dark-blue;
+            }
         }
-
-        input[type="radio"]:hover + label {
-            background-color: $white;
-            color: $dark-blue;
-        }
-
-        input[type="radio"]:checked + label {
+        button {
+            width: 100%;
+            height: 45px;
+            @include responsive-spacing(margin, top, 24px, 3.598vh, 32px);
+            border-radius: 22.5px;
+            border: none;
             background-color: $orange;
-            color: $dark-blue;
+            @include heading-medium;
+            color: $very-dark-blue;
+            cursor: pointer;
+    
+            &:active {
+                background-color: $white;
+            }
         }
     }
 
-    button {
-        width: 100%;
-        height: 45px;
-        @include responsive-spacing(margin, top, 20px, 2.999vh, 25px);
-        border-radius: 22.5px;
-        border: none;
-        background-color: $orange;
-        @include heading-medium;
-        color: $very-dark-blue;
-        cursor: pointer;
-
-        &:active {
-            background-color: $white;
-        }
-    }
+    
 }
 
-h1 {
+#rating-title, #feedback-title {
     @include heading-large;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 7px;
+    } 
 }
 
 .text {
@@ -94,7 +106,6 @@ h1 {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    @include responsive-spacing(gap, all, 22px, 5.867vw, 26px);
     @include responsive-spacing(margin, x, 22px, 5.867vw, 32px);
     @include responsive-spacing(margin, y, 22px, 5.867vw, 45px);
 
@@ -105,11 +116,16 @@ h1 {
 
     #feedback {
         @include responsive-size(width, 168px, 44.8vw, 193px);
+        @include responsive-spacing(margin, y, 24px, 3.598vw, 32px);
         height: 32px;
         background-color: $dark-blue;
         color: $orange;
         @include body;
         border-radius: 22.5px;
         padding: 6px 0;
+    }
+
+    #feedback-title {
+        margin-bottom: 10px; 
     }
 }

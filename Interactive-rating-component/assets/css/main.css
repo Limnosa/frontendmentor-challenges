@@ -23,9 +23,8 @@ main {
   min-width: 327px;
   width: 87.2vw;
   max-width: 412px;
-  min-height: 360px;
-  height: 53.973vh;
-  max-height: 416px;
+  /*@include responsive-size(height, 360px, 53.973vh, 416px);*/
+  height: auto;
 }
 @media (min-width: 768px) {
   main {
@@ -36,8 +35,6 @@ main {
 .rating-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: clamp(20px, 2.999vh, 25px);
   margin-left: clamp(22px, 5.867vw, 32px);
   margin-right: clamp(22px, 5.867vw, 32px);
   margin-top: clamp(24px, 6.4vw, 32px);
@@ -52,6 +49,7 @@ main {
   min-height: 40px;
   height: 10.667vw;
   max-height: 48px;
+  margin-bottom: clamp(16px, 4.267vw, 30px);
   line-height: 5.997vh;
   display: inline-flex;
   align-items: center;
@@ -63,17 +61,23 @@ main {
   max-width: 16.75px;
   height: auto;
 }
+.rating-container #rating-title {
+  margin-bottom: 17px;
+}
 .rating-container input[type=radio] {
   position: absolute;
   opacity: 0;
 }
-.rating-container .rating {
+.rating-container #rating-form {
+  margin-top: 24px;
+}
+.rating-container #rating-form .rating {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   -moz-column-gap: clamp(17px, 4.533vw, 21px);
        column-gap: clamp(17px, 4.533vw, 21px);
 }
-.rating-container .rating label {
+.rating-container #rating-form .rating label {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -93,44 +97,48 @@ main {
   text-align: center;
   cursor: pointer;
 }
-.rating-container .rating input[type=radio]:hover + label {
+.rating-container #rating-form .rating input[type=radio]:hover + label {
   background-color: #fff;
   color: #262E38;
 }
-.rating-container .rating input[type=radio]:checked + label {
+.rating-container #rating-form .rating input[type=radio]:checked + label {
   background-color: #FC7614;
   color: #262E38;
 }
-.rating-container button {
+.rating-container #rating-form button {
   width: 100%;
   height: 45px;
-  margin-top: clamp(20px, 2.999vh, 25px);
+  margin-top: clamp(24px, 3.598vh, 32px);
   border-radius: 22.5px;
   border: none;
   background-color: #FC7614;
   font-weight: 700;
   font-size: 14px;
-  line-height: auto;
   letter-spacing: 1.87px;
   color: #131518;
+  text-transform: uppercase;
   color: #131518;
   cursor: pointer;
 }
 @media (min-width: 768px) {
-  .rating-container button {
+  .rating-container #rating-form button {
     font-size: 15px;
     letter-spacing: 2px;
   }
 }
-.rating-container button:active {
+.rating-container #rating-form button:active {
   background-color: #fff;
 }
 
-h1 {
+#rating-title, #feedback-title {
   font-weight: 700;
   font-size: clamp(24px, 6.4vw, 28px);
-  line-height: auto;
   color: #fff;
+}
+@media (min-width: 768px) {
+  #rating-title, #feedback-title {
+    margin-bottom: 7px;
+  }
 }
 
 .text {
@@ -152,7 +160,6 @@ h1 {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  gap: clamp(22px, 5.867vw, 26px);
   margin-left: clamp(22px, 5.867vw, 32px);
   margin-right: clamp(22px, 5.867vw, 32px);
   margin-top: clamp(22px, 5.867vw, 45px);
@@ -168,6 +175,8 @@ h1 {
   min-width: 168px;
   width: 44.8vw;
   max-width: 193px;
+  margin-top: clamp(24px, 3.598vw, 32px);
+  margin-bottom: clamp(24px, 3.598vw, 32px);
   height: 32px;
   background-color: #262E38;
   color: #FC7614;
@@ -182,6 +191,9 @@ h1 {
     font-size: 15px;
     line-height: 24px;
   }
+}
+.feedback-container #feedback-title {
+  margin-bottom: 10px;
 }
 
 footer {
