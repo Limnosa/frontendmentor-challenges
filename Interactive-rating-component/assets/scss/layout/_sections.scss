@@ -3,6 +3,9 @@
 @use '../base/typography' as *;
 @use '../utils/mixins' as *;
 
+
+//rating container
+
 .rating-container {
     display: flex;
     flex-direction: column;
@@ -25,10 +28,6 @@
             @include responsive-size(width, 13.96px, 3.723vw, 16.75px);
             height: auto;
         }
-    }
-
-    #rating-title {
-        margin-bottom: 17px;
     }
 
     input[type="radio"] {
@@ -83,22 +82,9 @@
             }
         }
     }
-
-    
 }
 
-#rating-title, #feedback-title {
-    @include heading-large;
-
-    @include breakpoint(tablet) {
-        margin-bottom: 7px;
-    } 
-}
-
-.text {
-    @include body;
-    color: $light-grey;
-}
+//feedback container
 
 .feedback-container {
     display: none;
@@ -124,8 +110,27 @@
         border-radius: 22.5px;
         padding: 6px 0;
     }
+}
 
-    #feedback-title {
-        margin-bottom: 10px; 
-    }
+//common
+
+#rating-title {
+    margin-bottom: 17px;
+}
+
+#feedback-title {
+    margin-bottom: 10px; 
+}
+
+#rating-title, #feedback-title {
+    @include heading-large;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 7px;
+    } 
+}
+
+.text {
+    @include body;
+    color: $light-grey;
 }
