@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (secretLink) {
         secretLink.addEventListener("click", function(e) {
             e.preventDefault();
-            window.location.href = "../main.html?foundSecret=true";
+            window.location.href = "../index.html?foundSecret=true";
         });
     }
 });
