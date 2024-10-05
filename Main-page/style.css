@@ -38,11 +38,41 @@ nav p {
     font-weight: 400;
 }
 
+.mysterious-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; 
+    font-size: clamp(12px, 1.3vw, 18px);
+    color: rgba(255, 255, 255, 0.3); 
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.mysterious-text span {
+        animation: glow-in 0.8s both;
+      }
+
+@keyframes glow-in {
+    from {
+        opacity: 0;
+    }
+    65% {
+        opacity: 1;
+        text-shadow: 0 0 25px white;
+    }
+    75% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.7;
+    }
+}
+
 .cards {
     max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row-reverse;
 }
 
 .row {
@@ -63,6 +93,7 @@ nav p {
     0.3em 0.3em 1em rgb(0 0 0 / 60%);
     transition: transform 0.3s ease-in-out;
     width: 18rem;
+    text-decoration: none;
 }
 
 .card:hover {
@@ -83,9 +114,8 @@ nav p {
 }
 
 .card-text {
-    font-size: 1.7rem;
+    font-size: clamp(24px, 1.5vw, 28px);
     font-weight: 600;
-    text-decoration: none;
     color: black;
 }
 
@@ -179,4 +209,24 @@ footer ul {
         flex: 0 0 100%;
         max-width: 100%;
       }
+}
+
+
+.message {
+    display: none;
+    position: fixed;
+    background-color: #F0C000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 90px;
+    font-weight: 900;
+    color: white;
+    z-index: 9999;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

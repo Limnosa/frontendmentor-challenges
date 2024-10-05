@@ -16,6 +16,12 @@ body {
     background-repeat: repeat-x!important;
 }
 
+
+#secret-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .header {
     display: flex;
     gap: 23px;

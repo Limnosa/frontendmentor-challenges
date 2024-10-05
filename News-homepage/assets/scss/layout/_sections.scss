@@ -1,0 +1,187 @@
+@use '../base/sizing' as *;
+@use '../base/typography' as *;
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include responsive-spacing(row-gap, all, 64px, 17.067vw, 71px);
+
+    @include breakpoint(tablet) {
+        grid-template-columns: repeat(12, auto);
+        grid-template-rows: auto;
+        column-gap: 2.083vw;
+    }
+}
+
+.hero {
+
+    .web-3-image {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+        @include responsive-spacing(margin, bottom, 24px, 6.4vw, 28px);
+    }
+    
+    h1 {
+        @include heading-xl;
+        margin: 0 50px 16px 0;
+    }
+
+    p {
+        @include body;
+        color: $gunmetal;
+        @include responsive-spacing (margin, bottom, 24px, 6.4vw, 29px);
+    }
+
+    .hero-btn {
+        text-decoration: none;
+        @include button;
+        background-color: $light-vermillion;
+        width: 185px;
+        height: 48px;
+        display: inline-block;
+        padding: 12px 20px;
+        text-align: center;
+
+        &:hover {
+            color: $almost-white;
+            background-color: $dark-space-blue;
+        }
+    }
+
+    @include breakpoint (tablet) {
+        grid-column: span 8;
+        display: grid;
+        grid-template-columns: repeat(8, 4.514vw);
+        grid-template-rows: auto;
+        column-gap: 2.083vw;
+
+        picture {
+            grid-column: 1/ span 8;
+        }
+
+        h1 {
+            grid-column: 1 / span 4;
+            grid-row: 2 / span 2;
+            padding-left: 2px;
+        }
+
+        p {
+            grid-column: 5 / span 4;
+        }
+
+        .hero-btn {
+            grid-column: 5 / span 4;
+        }
+    }
+}
+
+.new {
+    @include responsive-spacing(padding, x, 20px, 5.333vw, 24px);
+    @include responsive-spacing(padding, y, 24px, 6.4vw, 32px);
+    background-color: $dark-space-blue;
+
+    h2 {
+        @include heading-m;
+        color: $yellow;
+        margin-bottom: 34px;
+
+        @include breakpoint(tablet) {
+            @include heading-l;
+        }
+    }
+
+    h3 {
+        a {
+            text-decoration: none;
+            @include heading-s;
+            margin-bottom: 8px;
+
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+
+    p {
+        @include body;
+        color: $silver;
+        margin: 0;
+    }
+
+    hr {
+        margin: 29px 0 31px 0;
+        color: $gunmetal;
+        opacity: 1;
+    }
+
+    @include breakpoint (tablet) {
+        grid-column: span 4;
+    }
+}
+
+.popular {
+    display: grid;
+    row-gap: 32px;
+    flex-direction: column;
+    article {
+        display: grid;
+        grid-template-columns: 100px auto;
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 24px;
+        align-items: flex-start;
+        
+        height: 127px;
+
+        img {
+            grid-row: 1 / span 3;
+            width: 100px;
+            height: auto;
+        }
+
+        span {
+            grid-row: 1 / span 1;
+            @include heading-m;
+            color: $light-vermillion;
+        }
+
+        h3 {
+            grid-row: 2 / span 1;
+            margin: 12px 0 9px 0;
+            
+            a {
+                text-decoration: none;
+                @include heading-xs;
+                color: $dark-space-blue;
+
+                &:hover {
+                    color: $light-vermillion;
+                }
+            }
+        }
+
+        p {
+            grid-area: 3 / span 1;
+            @include body;
+            color: $gunmetal;
+            margin: 0;
+        }
+    }
+
+    @include breakpoint (tablet) {
+        grid-column: span 12;
+        flex-direction: row;
+        grid-template-columns: repeat(12, 4.514vw);
+        column-gap: 2.083vw;
+
+
+        article {
+            grid-column: span 4;
+        }
+
+    }
+}

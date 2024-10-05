@@ -15,3 +15,15 @@ form.addEventListener('submit', (e)=> {
         email.id = 'wrong-email';
     } 
 })
+
+//return
+document.addEventListener("DOMContentLoaded", function() {
+    const secretLink = document.querySelector("#secret-link");
+
+    if (secretLink) {
+        secretLink.addEventListener("click", function(e) {
+            e.preventDefault();
+            window.location.href = "../main.html?foundSecret=true";
+        });
+    }
+});

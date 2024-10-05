@@ -20,6 +20,8 @@ This repository contains solutions to various Frontend Mentor challenges that I 
 
 - [Interactive-rating-component](./Interactive-rating-component)
 
+-[News-homepage](./News-homepage)
+
 ## Additional Information
 
 [Frontend Mentor](https://www.frontendmentor.io) - The source of the challenges.

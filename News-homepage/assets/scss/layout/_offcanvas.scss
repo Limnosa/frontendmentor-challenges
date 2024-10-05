@@ -1,0 +1,60 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+
+.nav-button {
+    border: none;
+    background-color: $almost-white;
+};
+
+.menu-button {
+    @include breakpoint(tablet) {
+        display: none;
+    }
+}
+
+.close-button {
+    width: 30.41px;
+    height: 30.41px;
+}
+
+.offcanvas {
+    --bs-offcanvas-width: 68.267vw;
+
+    background-color: $almost-white;
+    padding: 27px 20px 0 23px;
+    @include breakpoint(tablet) {
+        padding: 0;
+    }
+
+    &.offcanvas-end {
+        border-left: none;
+    }
+}
+
+.offcanvas-header {
+    justify-content: flex-end;
+    padding: 0 0 86px 0;
+}
+
+.offcanvas-body {
+    padding: 0;
+}
+
+.navbar-nav {
+    --bs-nav-link-color: $dark-space-blue;
+
+    .nav-link {
+        padding: 0 0 24px 0;
+
+        &:hover {
+            color: $light-vermillion;
+        }
+    
+        @include breakpoint(tablet) {
+            --bs-navbar-nav-link-padding-x: 0;
+            padding: 0;
+            margin-left: 40px;
+        }
+    }
+}
+

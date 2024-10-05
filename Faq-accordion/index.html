@@ -65,7 +65,7 @@
         <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
           <div class="accordion-body px-1 pt-0">
             The best place to get help is inside Frontend Mentor's Discord community. There's a help 
-            channel where you can ask questions and seek support from other community members.
+            channel where you can ask questions and seek support from other community <a href="#" id="secret-link">members.</a>
           </div>
         </div>
       </div>
@@ -76,6 +76,18 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/Limnosa">Limnosa</a>.
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const secretLink = document.querySelector("#secret-link");
+
+        if (secretLink) {
+            secretLink.addEventListener("click", function(e) {
+                e.preventDefault();
+                window.location.href = "../main.html?foundSecret=true";
+            });
+        }
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,6 @@
+@use '../base/sizing' as *;
+
+.logo {
+    @include responsive-size(width, 44.98px, 11.995vw, 64.09px);
+    @include responsive-size(height, 28px, 7.467vw, 39.9px);
+}

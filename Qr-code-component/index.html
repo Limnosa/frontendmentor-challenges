@@ -13,12 +13,24 @@
     <img class="qr-image" src="./images/image-qr-code.png" alt="QR code">
     <div class="text">
       <h1>Improve your front-end skills by building projects</h1>
-      <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+      <p>Scan the <a href="#" id="secret-link">QR code</a> to visit Frontend Mentor and take your coding skills to the next level</p>
     </div>
   </main>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/Limnosa">Limnosa</a>.
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const secretLink = document.querySelector("#secret-link");
+
+        if (secretLink) {
+            secretLink.addEventListener("click", function(e) {
+                e.preventDefault();
+                window.location.href = "../main.html?foundSecret=true";
+            });
+        }
+    });
+  </script>
 </body>
 </html>

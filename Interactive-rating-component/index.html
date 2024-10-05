@@ -37,7 +37,7 @@
     </div>
 
     <div class="feedback-container">
-      <img src="assets/images/illustration-thank-you.svg" alt="thank-you">
+      <a href="#" id="secret-link"><img src="assets/images/illustration-thank-you.svg" alt="thank-you"></a>
       <p id="feedback">You selected <span id="selected"><!-- rating here --></span> out of 5</p>
 
       <h1 id="feedback-title">Thank you!</h1>
@@ -51,6 +51,18 @@
       Coded by <a href="https://github.com/Limnosa">Limnosa</a>.
     </div>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const secretLink = document.querySelector("#secret-link");
+
+        if (secretLink) {
+            secretLink.addEventListener("click", function(e) {
+                e.preventDefault();
+                window.location.href = "../main.html?foundSecret=true";
+            });
+        }
+    });
+  </script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>

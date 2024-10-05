@@ -15,6 +15,11 @@ body {
     height: 100vh;
 }
 
+#secret-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .card {
     width: min-content;
     background-color: white;
