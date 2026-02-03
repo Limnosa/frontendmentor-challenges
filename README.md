@@ -20,7 +20,7 @@ This repository contains solutions to various Frontend Mentor challenges that I 
 
 - [Interactive-rating-component](./Interactive-rating-component)
 
--[News-homepage](./News-homepage)
+- [News-homepage](./News-homepage)
 
 ## Additional Information
 
